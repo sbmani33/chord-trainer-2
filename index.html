@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Guitar Trainer V2</title>
+<link rel="manifest" href="manifest.json">
+<style>
+body { font-family: -apple-system; margin:0; background:#0b0b0f; color:#fff; }
+header { padding:16px; background:#111; text-align:center; font-weight:600; }
+.container { padding:16px; }
+button { padding:12px; margin:6px 0; width:100%; font-size:16px; border-radius:10px; border:none; }
+.card { background:#1a1a22; padding:14px; border-radius:12px; margin:10px 0; }
+.small { opacity:0.7; font-size:12px; }
+input { width:100%; padding:10px; border-radius:8px; border:none; margin:6px 0; }
+</style>
+</head>
+<body>
+<header>🎸 Guitar Trainer V2</header>
+<div class="container">
+
+<div class="card">
+<div>Metronome</div>
+<button onclick="startMetro()">Start 80 BPM</button>
+<button onclick="stopMetro()">Stop</button>
+<div class="small" id="metroStatus">Idle</div>
+</div>
+
+<div class="card">
+<div>Scale Trainer (Major)</div>
+<button onclick="showScale()">Show C Major</button>
+<div id="scaleBox" class="small"></div>
+</div>
+
+<div class="card">
+<div>Chord Quiz</div>
+<button onclick="quiz()">New Chord</button>
+<div id="quizBox" class="small"></div>
+<input id="answer" placeholder="Type major/minor"/>
+<button onclick="check()">Check</button>
+<div id="result" class="small"></div>
+</div>
+
+<div class="card">
+<div>Session Tracker</div>
+<button onclick="addSession()">+ Practice 10 min</button>
+<div id="sessions" class="small"></div>
+</div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
